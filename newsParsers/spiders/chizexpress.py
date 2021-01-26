@@ -1,8 +1,8 @@
 import scrapy
 
 
-class ChizSpider(scrapy.Spider):
-    name = 'chiz'
+class ChizExpressSpider(scrapy.Spider):
+    name = 'chizexpress'
     start_urls = ['https://chelny-izvest.ru/news/widget/list/ekspress-novostinews-page/page/1']
 
     def parse(self, response):
