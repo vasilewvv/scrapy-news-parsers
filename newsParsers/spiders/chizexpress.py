@@ -10,8 +10,8 @@ class ChizExpressSpider(scrapy.Spider):
             try:
                 yield {
                     'title': news.css('div a::text').get().strip(),
-                    'date': news.css('div.widget-view-small__date::text').get().strip(),
                     'desc': news.css('div.widget-view-small__description::text').get().strip(),
+                    'date': news.css('div.widget-view-small__date::text').get().strip(),
                     'link': news.css('div a::attr(href)').get()
                 }
             except:
